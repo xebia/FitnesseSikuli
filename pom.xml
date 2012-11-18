@@ -34,7 +34,7 @@
         <fitlibrary.version>20091020</fitlibrary.version>
         <fitnesse.port>8000</fitnesse.port>
         <fitnesse.expiration>0</fitnesse.expiration>
-        <slf4j.version>1.6.4</slf4j.version>
+        <slf4j.version>1.6.6</slf4j.version>
         <sikuli-script-jar.location>/Applications/Sikuli-IDE.app/Contents/Resources/Java/sikuli-script.jar</sikuli-script-jar.location>
     </properties>
 
