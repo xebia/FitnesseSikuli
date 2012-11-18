@@ -1,0 +1,2 @@
+!| script | sikuli script fixture | 
+| run sikuli script | EclipseStuff |

@@ -1,0 +1,9 @@
+!2 !help
+!3 Sikuli should be installed.
+
+!contents -R2 -h -g
+
+!*****> '''Classpath'''
+!pomFile pom.xml@test
+*****!
+

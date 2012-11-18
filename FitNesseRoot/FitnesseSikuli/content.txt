@@ -6,5 +6,5 @@
 
 *!
 !*****> '''Classpath'''
-!pomFile pom.xml@runtime
+!pomFile pom.xml@test
 *****!
