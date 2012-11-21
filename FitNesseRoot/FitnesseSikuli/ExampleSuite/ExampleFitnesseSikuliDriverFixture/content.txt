@@ -1,7 +1,12 @@
-!| script | environment fixture | 
-| ensure | is mac |
-| open | /Applications/eclipse/Eclipse.app |
-
 !| script | sikuli driver fixture | 
-| focus app | Eclipse |
+| ensure | is mac |
+| set sikuli script | Apple |
+| click | apple |
+| click | search |
+| click | Spotlight |
+| wait | Spotlight |
+| type | Sikuli |
+
+
+
 

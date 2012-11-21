@@ -2,23 +2,30 @@ package com.xebia.sikuli;
 
 import java.io.File;
 
+import org.sikuli.script.App;
+import org.sikuli.script.FindFailed;
+import org.sikuli.script.Region;
+import org.sikuli.script.Screen;
+import org.sikuli.script.Settings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.sikuli.script.*;
-
-import static com.xebia.sikuli.SikuliUtil.*;
 public class SikuliDriverFixture {
     @SuppressWarnings("unused")
     private static final Logger LOG = LoggerFactory.getLogger(SikuliDriverFixture.class);
 
     public final Screen screen;
     private App app;
-    private File sikuliScript=null;
+    File sikuliScript=null;
+    
+    public Region currentRegion;
 
-    private long hightlightTime=2000;
+    private long hightlightTime=3;
+    
+    final String sikuliScriptsDir = "FitnesseRoot/files/testSikuliScripts";
 
     public SikuliDriverFixture() {
         screen = new Screen();
+        currentRegion=screen;
     }
 
     public void setObserveScanRate(float scanRate) {
@@ -36,13 +43,18 @@ public class SikuliDriverFixture {
         app.focus();
         return app.window();
     }
-    public void highlight(String img) throws FindFailed {
-        highlight(img,hightlightTime);
+    public void highlight(String imgOrText) throws FindFailed {
+        highlight(imgPath(imgOrText),hightlightTime);
     }
     public void highlight(String img, long time) throws FindFailed {
-        Match region = window().find(imgPath(sikuliScript,img));
-        region.highlight(time);
+        currentRegion = window().find(imgPath(img));
+        currentRegion.highlight(time);
         
+    }
+   
+    
+    public void highlight() {
+        currentRegion.highlight(hightlightTime);
     }
 
     public void focusApp(String appTitle) {
@@ -50,13 +62,40 @@ public class SikuliDriverFixture {
         if (app==null) {
             throw new FitSikException(appTitle+" is not active");
         }
+        currentRegion=app.window();
         if (sikuliScript==null) {
-            sikuliScript=new File(appTitle+".sikuli");
+            sikuliScript=new File(sikuliScriptsDir + File.separator+appTitle + ".sikuli");
         }
      }
     
+    public String imgPath(String imgOrText) {
+        if (! imgOrText.contains(".") ) {
+            imgOrText=imgOrText+".png";
+        }
+        if (! imgOrText.startsWith(File.separator)) {
+            imgOrText=new File(sikuliScript,imgOrText).getAbsolutePath();
+        }
+        return imgOrText;
+    }
+    
+    public void click(String imgOrText) throws FindFailed {
+        currentRegion.click(imgPath(imgOrText));
+    }
+    
+    public void wait(String imgOrText) throws FindFailed {
+        currentRegion.wait(imgPath(imgOrText));
+    }
+    
+    public void type(String text) throws FindFailed {
+        currentRegion.type(text);
+    }
+    
     public void setSikuliScript(String path) {
-        File script=new File(path);
+        File script;
+        if (path.startsWith(File.separator))
+            script=new File(path);
+        else
+            script=new File(sikuliScriptsDir,path);
         if (! script.getName().contains(".")) {
             script=new File(script.getParent(),script.getName()+".sikuli");
         }
