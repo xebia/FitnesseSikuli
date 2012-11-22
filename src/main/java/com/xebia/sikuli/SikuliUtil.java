@@ -5,6 +5,7 @@ import java.io.File;
 import org.sikuli.script.Region;
 
 public class SikuliUtil {
+    public static final String defaultScriptDir = "FitnesseRoot/files/sikuliScripts";
     static void enlargeRegion(Region region, int size) {
         region.setX(region.getX() - size);
         region.setY(region.getY() - size);

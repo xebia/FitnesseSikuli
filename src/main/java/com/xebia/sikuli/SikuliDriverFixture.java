@@ -21,7 +21,7 @@ public class SikuliDriverFixture {
 
     private long hightlightTime=3;
     
-    final String sikuliScriptsDir = "FitnesseRoot/files/testSikuliScripts";
+    public String sikuliScriptsDir = SikuliUtil.defaultScriptDir;
 
     public SikuliDriverFixture() {
         screen = new Screen();

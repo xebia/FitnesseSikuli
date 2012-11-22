@@ -13,7 +13,7 @@ import static com.xebia.sikuli.SikuliUtil.*;
 
 public class SikuliScriptFixture {
     private static final Logger LOG = LoggerFactory.getLogger(SikuliScriptFixture.class);
-    private String scriptdir="FitNesseRoot/files/testSikuliScripts";
+    public String scriptdir=SikuliUtil.defaultScriptDir;
 
     public String arguments="";
     public SikuliScriptFixture() {

@@ -29,9 +29,7 @@
         <fitnesse.port>8000</fitnesse.port>
         <fitnesse.expiration>0</fitnesse.expiration>
         <slf4j.version>1.6.6</slf4j.version>
-        <sikuli-script-jar.location>/Applications/Sikuli-IDE.app/Contents/Resources/Java/sikuli-script.jar</sikuli-script-jar.location>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.sikuli</groupId>
@@ -155,6 +153,26 @@
     </build>
 
     <profiles>
+        <profile>
+            <activation>
+                <os>
+                    <family>mac</family>
+                </os>
+            </activation>
+            <properties>
+                <sikuli-script-jar.location>/Applications/Sikuli-IDE.app/Contents/Resources/Java/sikuli-script.jar</sikuli-script-jar.location>
+            </properties>
+        </profile>
+        <profile>
+            <activation>
+                <os>
+                    <family>windows</family>
+                </os>
+            </activation>
+            <properties>
+                <sikuli-script-jar.location>C:/Program files/Sikuli/sikuli-script.jar</sikuli-script-jar.location>
+            </properties>
+        </profile>    
         <profile>
             <id>jar-with-dependencies</id>
             <build>
