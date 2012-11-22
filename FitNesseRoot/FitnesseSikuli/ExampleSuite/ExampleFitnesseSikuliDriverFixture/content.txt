@@ -1,3 +1,5 @@
+Here's an example that demonstrate calling sikuli from within Fitnesse. Best way to start: create a Sikuli script in the Sikuli IDE. After that convert your script to Wiki tables as shown below.
+
 !| script | sikuli driver fixture | 
 | ensure | is mac |
 | set sikuli script | Apple |
@@ -5,7 +7,7 @@
 | click | search |
 | click | Spotlight |
 | wait | Spotlight |
-| type | Sikuli |
+| type | Hello from Xebia |
 
 
 

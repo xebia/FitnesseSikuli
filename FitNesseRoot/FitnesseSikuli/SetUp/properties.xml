@@ -2,13 +2,14 @@
 <properties>
 	<Edit/>
 	<Files/>
-	<Help>Setup page inporting the Xebium code</Help>
+	<Help>Setup page inporting the Sikuli Fixture code</Help>
 	<Normal/>
 	<Properties/>
 	<RecentChanges/>
 	<Refactor/>
 	<Search/>
-	<Suites/>
+	<Static/>
+	<Suites></Suites>
 	<Versions/>
 	<WhereUsed/>
 </properties>

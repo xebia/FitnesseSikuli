@@ -1,2 +1,4 @@
+Place a Sikuli script in the directory '''!-FitnesseRoot/files/sikuliScripts-!'''. Then you can run the script as shown below.
+
 !| script | sikuli script fixture | 
 | run sikuli script | EclipseStuff |

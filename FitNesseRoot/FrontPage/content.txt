@@ -3,5 +3,5 @@
 !3 Press image below to enter the project
 [[!img http://files/images/Sikuli.png][FitnesseSikuli]]
 
-If you want to start using Sikuli from within Fitnesse, the FitnesseTemplate might be a good starting point.
+If you want to start using Sikuli from within Fitnesse, use one of the examples as a starting point.
 
