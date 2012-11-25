@@ -1,8 +1,8 @@
-Here's an example that demonstrate calling sikuli from within Fitnesse. Best way to start: create a Sikuli script in the Sikuli IDE. After that convert your script to Wiki tables as shown below.
+Here's an example that demonstrate using the Sikuli Fixture to automate some UI tasks.
 
 !| script | sikuli driver fixture | 
 | ensure | is mac |
-| set sikuli script | Apple |
+| ensure | image dir | Apple |
 | click | apple |
 | click | search |
 | click | Spotlight |

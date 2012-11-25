@@ -1,5 +1,6 @@
 !2 !help
-!3 Sikuli should be installed.
+!3 Prerequisites
+* Install Sikuli
 
 !contents -R2 -h -g
 

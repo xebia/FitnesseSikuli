@@ -11,6 +11,12 @@ import org.sikuli.script.*;
 
 import static com.xebia.sikuli.SikuliUtil.*;
 
+/**
+ * Use this fixture to run scripts created by the Sikuli IDE directly.
+ * 
+ * @author gvandieijen
+ *
+ */
 public class SikuliScriptFixture {
     private static final Logger LOG = LoggerFactory.getLogger(SikuliScriptFixture.class);
     public String scriptdir=SikuliUtil.defaultScriptDir;

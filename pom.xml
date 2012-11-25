@@ -28,13 +28,19 @@
 
     <properties>
         <fitnesse.version>20111025</fitnesse.version>
-        <fitlibrary.version>20091020</fitlibrary.version>
         <fitnesse.port>8000</fitnesse.port>
         <fitnesse.expiration>0</fitnesse.expiration>
         <slf4j.version>1.6.6</slf4j.version>
 	<!--Property below is also set in a profile that's actived per os, see profiles section for more information -->
 	<sikuli-script-jar.location>/opt/sikuli</sikuli-script-jar.location>
     </properties>
+    
+    <repositories>
+    <repository>
+    <id>oss-snapshots</id>
+    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+    </repository>
+    </repositories>
     <dependencies>
         <dependency>
             <groupId>org.sikuli</groupId>
@@ -42,6 +48,11 @@
             <version>x1.0-rc3</version>
             <scope>system</scope>
             <systemPath>${sikuli-script-jar.location}</systemPath>
+        </dependency>
+	<dependency>
+                <groupId>org.sikuli</groupId>
+                <artifactId>sikuli-api</artifactId>
+                <version>1.0.2</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -59,7 +70,7 @@
             <groupId>org.fitnesse</groupId>
             <artifactId>fitnesse</artifactId>
             <version>${fitnesse.version}</version>
-            <scope>runtime</scope>
+            <scope>compile</scope>
         </dependency>
     <!--
     <dependency>

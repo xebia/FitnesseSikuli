@@ -14,11 +14,11 @@ public class SikuliDriverFixtureTest {
 
     @Test
     public void testSettingScriptDir() {
-        fixture.setSikuliScript("Test");
-        System.out.println(fixture.sikuliScript.getAbsoluteFile().getParentFile());
-        assertTrue("Pointing to right sikuliscriptsdir",fixture.sikuliScript.getAbsoluteFile().getParentFile().exists());
-        assertEquals("Test.sikuli",fixture.sikuliScript.getName());
-        assertTrue(fixture.imgPath("apple").endsWith(".png"));
+        fixture.imageDir("Apple");
+        System.out.println(fixture.imgDir.getAbsoluteFile().getParentFile());
+        assertTrue("Pointing to right sikuliscriptsdir",fixture.imgDir.getAbsoluteFile().getParentFile().exists());
+        assertEquals("Apple.sikuli",fixture.imgDir.getName());
+        assertTrue(fixture.imgFileOrNone("apple").getName().endsWith(".png"));
         
     }
 
