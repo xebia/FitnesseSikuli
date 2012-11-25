@@ -2,6 +2,7 @@ FitnesseSikuli enables you to use Sikuli from with FitNesse.
 Sikuli is software to automatate any UI-related task. Fitnesse is a acceptence-testframework. Use Sikuli to automate any UI related task you need within a test to be fully automatic - 'the last mile of test-automation'.
 
 For more information and a demonstration, just download and run Fitnesse Sikuli by following the steps below
+
 ---------------
 
 Execute the following command to run Fitnesse-Sikuli
