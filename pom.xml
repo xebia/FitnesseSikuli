@@ -23,6 +23,10 @@
         </license>
     </licenses>
 
+  <scm>
+    <developerConnection>scm:git:git@github.com:xebia/FitnesseSikuli.git</developerConnection>
+  </scm>
+
     <properties>
         <fitnesse.version>20111025</fitnesse.version>
         <fitlibrary.version>20091020</fitlibrary.version>
