@@ -27,7 +27,7 @@
   </scm>
 
     <properties>
-        <fitnesse.version>20111025</fitnesse.version>
+        <fitnesse.version>20120223-SNAPSHOT</fitnesse.version>
         <fitnesse.port>8000</fitnesse.port>
         <fitnesse.expiration>0</fitnesse.expiration>
         <slf4j.version>1.6.6</slf4j.version>
