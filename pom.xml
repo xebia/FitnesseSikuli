@@ -27,7 +27,7 @@
   </scm>
 
     <properties>
-        <fitnesse.version>20120223-SNAPSHOT</fitnesse.version>
+        <fitnesse.version>20130531</fitnesse.version>
         <fitnesse.port>8000</fitnesse.port>
         <fitnesse.expiration>0</fitnesse.expiration>
         <slf4j.version>1.6.6</slf4j.version>
@@ -35,24 +35,18 @@
 	<sikuli-script-jar.location>/opt/sikuli</sikuli-script-jar.location>
     </properties>
     
-    <repositories>
-    <repository>
-    <id>oss-snapshots</id>
-    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-    </repository>
-    </repositories>
     <dependencies>
         <dependency>
             <groupId>org.sikuli</groupId>
             <artifactId>sikuli-script</artifactId>
-            <version>x1.0-rc3</version>
+            <version>1.0.1</version>
             <scope>system</scope>
             <systemPath>${sikuli-script-jar.location}</systemPath>
         </dependency>
 	<dependency>
                 <groupId>org.sikuli</groupId>
                 <artifactId>sikuli-api</artifactId>
-                <version>1.0.2</version>
+                <version>1.1.0</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -177,7 +171,7 @@
                 </os>
             </activation>
             <properties>
-                <sikuli-script-jar.location>/Applications/Sikuli-IDE.app/Contents/Resources/Java/sikuli-script.jar</sikuli-script-jar.location>
+                <sikuli-script-jar.location>/Applications/SikuliX-IDE.app/Contents/sikuli-ide.jar</sikuli-script-jar.location>
             </properties>
         </profile>
         <profile>
