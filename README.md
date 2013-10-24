@@ -1,3 +1,5 @@
+** Current application does not work yet with latest version of Sikuli. Will be fixed ASAP **
+
 FitnesseSikuli enables you to use Sikuli from with FitNesse. The project is a fork of Xebium, which in turn integrates Selenium with Fitnesse.
 Sikuli is software to automatate any UI-related task. Fitnesse is a acceptence-testframework. Combined, you can use Fitnesse-Sikuli to automate any UI related task you need within a test to be fully automatic - 'the last mile of test-automation'.
 
